@@ -20,8 +20,8 @@ This code was tested with Python 2.7. It is highly recommended to use the GPU ve
 ### Prerequisites
 ```
 natsort==5.4.1
-numpy==1.14.5
-tensorflow==1.10.0
+numpy==1.16.0
+tensorflow==1.13.1
 Pillow==5.4.1
 ```
 
