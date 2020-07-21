@@ -1,4 +1,4 @@
-# CDnCNN-B for blind color image denoising - Tensorflow implementation
+Deep CNN for Image Denoising- Tensorflow implementation
 
 This model is trained for blind denoising at multiple noise levels (\[0, 55\]).
 
@@ -15,7 +15,6 @@ This model is trained for blind denoising at multiple noise levels (\[0, 55\]).
 
 ## Getting Started
 
-This code was tested with Python 2.7. It is highly recommended to use the GPU version of Tensorflow for fast training.
 
 ### Prerequisites
 ```
@@ -30,11 +29,11 @@ Pillow==5.4.1
 First, 128x3000 patches are extracted from the CBSD432 images as follows:
 
 ```
-python2 generate_patches_rgb_blind.py
+python generate_patches_rgb_blind.py
 ```
 Then train the network:
 ```
-python2 main_blind.py --phase train
+python main_blind.py --phase train
 ```
 You can also control other paramaters such as batch size, number of epochs. More info inside main.py.
 
@@ -49,7 +48,7 @@ tensorboard --logdir=./logs
 
 To test the network for sigma=50:
 ```
-python2 main_blind.py --phase test --sigma 50.0
+python main_blind.py --phase test --sigma 50.0
 ```
 Denoised images are saved in ./test folder.
 
